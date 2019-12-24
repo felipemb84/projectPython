@@ -1,6 +1,5 @@
 import turtle # for simple games it works fine, but normaly people uses pygame
 import os # to be able to blay the sound when the ball bounce
-import tkinter as tk
 
 wn = turtle.Screen()
 wn.title("Pong")
@@ -48,7 +47,7 @@ pen.color("white")
 pen.penup()
 pen.hideturtle()
 pen.goto(0, 260)
-pen.write("Player 1: 0  Player 1: 0", align="center", font=("Courier", 24, "normal"))
+pen.write("Player 1: 0 x Player 2: 0", align="center", font=("Courier", 24, "normal"))
 
 # Functions
 def paddle_a_up():
@@ -103,14 +102,14 @@ while True:
     if ball.xcor() > 350: # boarder limit is half of the screen (screen size set = 800), minus the ball size from the center of the ball (10px - ball size 20px)
         score_a += 1
         pen.clear()
-        pen.write("Player A: {}  Player B: {}".format(score_a, score_b), align="center", font=("Courier", 24, "normal"))
+        pen.write("Player 1: {} x Player 2: {}".format(score_a, score_b), align="center", font=("Courier", 24, "normal"))
         ball.goto(0, 0)
         ball.dx *= -1
 
     elif ball.xcor() < -350:
         score_b += 1
         pen.clear()
-        pen.write("Player A: {}  Player B: {}".format(score_a, score_b), align="center", font=("Courier", 24, "normal"))
+        pen.write("Player 1: {} x Player 2: {}".format(score_a, score_b), align="center", font=("Courier", 24, "normal"))
         ball.goto(0, 0)
         ball.dx *= -1
 
