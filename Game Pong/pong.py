@@ -91,12 +91,12 @@ while True:
     if ball.ycor() > 290: # boarder limit is half of the screen (screen size set = 600), minus the ball size from the center of the ball (10px - ball size 20px)
         ball.sety(290)
         ball.dy *= -1
-        os.system("afplay bounce.wav")
+        os.system("afplay bounce.wav&")
     
     elif ball.ycor() < -290:
         ball.sety(-290)
         ball.dy *= -1
-        os.system("afplay bounce.wav")
+        os.system("afplay bounce.wav&")
 
     # Left and right
     if ball.xcor() > 350: # boarder limit is half of the screen (screen size set = 800), minus the ball size from the center of the ball (10px - ball size 20px)
