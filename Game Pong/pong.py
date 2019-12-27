@@ -1,5 +1,5 @@
-import turtle # for simple games it works fine, but normaly people uses pygame
-import os # to be able to blay the sound when the ball bounce
+import turtle #for simple games it works fine, but normaly people uses "pygame"
+import os #to be able to blay the sound when the ball bounce
 
 wn = turtle.Screen()
 wn.title("Pong")
